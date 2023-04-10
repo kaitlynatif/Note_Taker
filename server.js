@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.static('Develop/public'));
 
-app.get("/api/notes", (res) => {
+app.get("/api/notes", (req, res) => {
     res.json(notes.slice(1));
 });
 
@@ -23,16 +23,16 @@ app.use(express.urlencoded({extended: true}));
 // This parses JSON data.
 app.use(express.json());
 
-app.get("/index", (res) => {
-    res.sendFile(path.join(dirname, "./Develop/public/index.html"));
+app.get("/index", (req, res) => {
+    res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
-app.get("/notes", (res) => {
-    res.sendFile(path.join(dirname, "./Develop/public/notes.html"));
+app.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
 });
 
-app.get("*", (res) => {
-    res.sendFile(path.join(dirname, "./Develop/public/index.html"));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
 // This function allows the user to save new notes.
@@ -49,7 +49,7 @@ function createNotes(body, notesArray) {
 
     notesArray.push(newNote);
     fs.writeFileSync(
-        path.join(dirname, './db/db.json'),
+        path.join(__dirname, './db/db.json'),
         JSON.stringify(notesArray, null, 2)
     );
     return newNote;
@@ -69,7 +69,7 @@ function deleteNotes(id, notesArray) {
         if (note.id == id) {
             notesArray.splice(i, 1);
             fs.writeFileSync(
-                path.join(dirname, './db/db.json'),
+                path.join(__dirname, './db/db.json'),
                 JSON.stringify(notesArray, null, 2)
             );
 
