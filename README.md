@@ -73,6 +73,17 @@ The following API routes should be created:
 ## Contributions
 ### Credits and Helpful Resources Used to Create this Application
 
+* [Express.js](https://expressjs.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Heroku](https://www.heroku.com/)
+* [npm](https://www.npmjs.com/)
+* [Inquirer](https://www.npmjs.com/package/inquirer)
+* [Express JS Crash Course](https://youtu.be/L72fhGm1tfE)
+* [Express JS Note Taker Video Tutorial](https://youtu.be/-UiqzvUe360)
+* [What is process.env.PORT in Node.js?](https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js)
+* [How to Deploy a Node.js App to Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
+* [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
 ## Bonus
 
 You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
