@@ -1,4 +1,4 @@
-# 11 Express.js: Note Taker
+# Express.js: Note Taker
 
 # Table of Contents
 * [Description](#description)
@@ -71,7 +71,7 @@ The following API routes should be created:
 * `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
 
 ## Contributions
-### Credits and Helpful SVG Resources Used to Create this Application
+### Credits and Helpful Resources Used to Create this Application
 
 ## Bonus
 
