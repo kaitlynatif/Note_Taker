@@ -71,7 +71,7 @@ app.post("/api/notes", (req, res) => {
     res.json(newNote);
 });
 
-// This function allows the user to delete existing notes from the db.jason file.
+// This function allows the user to delete existing notes from the db.json file.
 // Loop through the notes array and remove the note with the given id property.
 // Code snippet from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/05-Ins_Query-Params/server.js:
