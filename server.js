@@ -28,6 +28,10 @@ app.use(express.urlencoded({extended: true}));
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/15-Ins_Body-Parsing/server.js:
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
 // This returns the notes.html file.
 // This is the route that the user will see when they click on the "Get Started" button.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
