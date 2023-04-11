@@ -80,7 +80,7 @@ function deleteNotes(id, notesArray) {
 
 // Delete method allows the user to delete saved notes.
 app.delete('/api/notes/:id', (req, res) => {
-    deleteNotes(req.params.id, notesData);
+    deleteNotes(req.params.id, notes);
     res.json(true);
 });
 
