@@ -79,7 +79,7 @@ function deleteNotes(id, notesArray) {
     for (let i = 0; i < notesArray.length; i++) {
         let note = notesArray[i];
 
-        if (note.id == id) {
+        if (note.id === id) {
             notesArray.splice(i, 1);
             fs.writeFileSync(
                 path.join(__dirname, './Develop/db/db.json'),
