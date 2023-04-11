@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Reads JavaScript file, executes it, and returns the exported JSON objects.
-const notes = require("./db/db.json");
+const notes = require("./Develop/db/db.json");
 
 // Sets the Port
 const PORT = process.env.PORT || 3001;
