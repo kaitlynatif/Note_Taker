@@ -46,6 +46,55 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Installation And Usage
 
+### The following steps are required to install and use this application:
+
+Install Heroku CLI
+
+```bash
+brew install heroku
+```
+
+```bash
+heroku --version
+```
+
+Declare Application Dependencies
+
+```bash
+npm init -y
+```
+
+```bash
+npm install express
+```
+
+Specify Version of Node
+
+```bash
+node --version
+```
+
+Build the Application and Run it Locally
+
+```bash
+npm install
+```
+
+```bash
+heroku local web --port 3001
+```
+
+Deploy Application to Heroku
+
+```bash
+git add .
+git commit -m "commit message"
+heroku login
+heroku create
+git push heroku main
+heroku open
+```
+
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
@@ -77,10 +126,10 @@ The following API routes should be created:
 * [Node.js](https://nodejs.org/en/)
 * [Heroku](https://www.heroku.com/)
 * [npm](https://www.npmjs.com/)
-* [Inquirer](https://www.npmjs.com/package/inquirer)
 * [Express JS Crash Course](https://youtu.be/L72fhGm1tfE)
 * [Express JS Note Taker Video Tutorial](https://youtu.be/-UiqzvUe360)
 * [What is process.env.PORT in Node.js?](https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js)
+* [Installation of Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 * [How to Deploy a Node.js App to Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
 * [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
