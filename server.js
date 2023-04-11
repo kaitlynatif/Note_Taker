@@ -92,6 +92,7 @@ function deleteNotes(id, notesArray) {
 
 // Delete method allows the user to delete saved notes.
 // This receives a query parameter containing the id of a note to delete.
+// Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/23-Ins_Custom-Middleware/server.js:
 app.delete('/api/notes/:id', (req, res) => {
     deleteNotes(req.params.id, notes);
     res.json(true);
