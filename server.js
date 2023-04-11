@@ -16,7 +16,7 @@ const app = express();
 app.use(express.static('Develop/public'));
 
 // This reads the db.json file and returns all saved notes as JSON.
-app.get("/api/notes", (req, res) => {
+app.get('/api/notes', (req, res) => {
     res.json(notes.slice(1));
 });
 
@@ -28,20 +28,16 @@ app.use(express.urlencoded({extended: true}));
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/15-Ins_Body-Parsing/server.js:
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
-});
-
 // This returns the notes.html file.
 // This is the route that the user will see when they click on the "Get Started" button.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
-app.get("/notes", (req, res) => {
+app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
 });
 
 // This returns the index.html file.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
-app.get("*", (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
@@ -70,7 +66,7 @@ function createNotes(body, notesArray) {
 // Post method connects user input to the back-end.
 // This receives a new note to save on the request body, adds it to the db.json file, and then returns the new note to the client.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/15-Ins_Body-Parsing/server.js:
-app.post("/api/notes", (req, res) => {
+app.post('/api/notes', (req, res) => {
     const newNote = createNotes(req.body, notes);
     res.json(newNote);
 });
