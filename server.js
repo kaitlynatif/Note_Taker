@@ -18,6 +18,7 @@ app.use(express.static('Develop/public'));
 // This reads the db.json file and returns all saved notes as JSON.
 app.get('/api/notes', (req, res) => {
     res.json(notes.slice(1));
+    console.log(notes.slice(1));
 });
 
 // Middleware for parsing application/json and urlencoded data
@@ -69,6 +70,7 @@ function createNotes(body, notesArray) {
 app.post('/api/notes', (req, res) => {
     const newNote = createNotes(req.body, notes);
     res.json(newNote);
+    console.log(newNote);
 });
 
 // This function allows the user to delete existing notes from the db.json file.
