@@ -24,10 +24,6 @@ app.use(express.urlencoded({extended: true}));
 // This parses JSON data.
 app.use(express.json());
 
-app.get("/index", (req, res) => {
-    res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
-});
-
 app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
 });
