@@ -6,24 +6,14 @@ const path = require('path');
 // Reads JavaScript file, executes it, and returns the exported JSON objects.
 const notes = require("./Develop/db/db.json");
 
-const PORT = 3001;
-
-const app = express();
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-app.use(express.static('Develop/public'));
-
 // Sets the Port
-// const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 // Creates an express server.
-// const app = express();
+const app = express();
 
 // This allows the user to access the public folder.
-// app.use(express.static('Develop/public'));
+app.use(express.static('Develop/public'));
 
 // This reads the db.json file and returns all saved notes as JSON.
 app.get('/api/notes', (req, res) => {
