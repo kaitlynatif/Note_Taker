@@ -16,7 +16,7 @@ const app = express();
 app.use(express.static('Develop/public'));
 
 // This reads the db.json file and returns all saved notes as JSON.
-app.get('/api/notes', (req, res) => {
+app.get('/api/notes', (_req, res) => {
     res.json(notes.slice(1));
 });
 
@@ -31,13 +31,13 @@ app.use(express.json());
 // This returns the notes.html file.
 // This is the route that the user will see when they click on the "Get Started" button.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
-app.get('/notes', (req, res) => {
+app.get('/notes', (_req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
 });
 
 // This returns the index.html file.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
-app.get('*', (req, res) => {
+app.get('*', (_req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
