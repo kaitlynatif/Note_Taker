@@ -16,7 +16,7 @@ const app = express();
 app.use(express.static('Develop/public'));
 
 // This reads the db.json file and returns all saved notes as JSON.
-app.get('/api/notes', (__req, res) => {
+app.get('/api/notes', (req, res) => {
     res.json(notes.slice(1));
 });
 
@@ -31,13 +31,13 @@ app.use(express.json());
 // This returns the notes.html file.
 // This is the route that the user will see when they click on the "Get Started" button.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
-app.get('/notes', (__req, res) => {
+app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/notes.html"));
 });
 
 // This returns the index.html file.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/03-Ins_API-HTML-Routes/server.js:
-app.get('*', (__req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, "./Develop/public/index.html"));
 });
 
@@ -66,7 +66,7 @@ function createNotes(body, notesArray) {
 // Post method connects user input to the back-end.
 // This receives a new note to save on the request body, adds it to the db.json file, and then returns the new note to the client.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/15-Ins_Body-Parsing/server.js:
-app.post('/api/notes', (__req, res) => {
+app.post('/api/notes', (req, res) => {
     const newNote = createNotes(req.body, notes);
     res.json(newNote);
 });
@@ -94,7 +94,7 @@ function deleteNotes(id, notesArray) {
 // Delete method allows the user to delete saved notes.
 // This receives a query parameter containing the id of a note to delete.
 // Code snippet from GT-VIRT-FSF-PT-01-2023-U-LOLC/11-Express/01-Activities/23-Ins_Custom-Middleware/server.js:
-app.delete('/api/notes/:id', (__req, res) => {
+app.delete('/api/notes/:id', (req, res) => {
     deleteNotes(req.params.id, notes);
     res.json(true);
 });
