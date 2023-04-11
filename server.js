@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Reads JavaScript file, executes it, and returns the exported JSON objects.
-const notes = require("./Develop/db/db.json");
+const notes = require("./db/db.json");
 
 // Sets the Port
 const PORT = process.env.PORT || 3001;
@@ -79,7 +79,7 @@ function deleteNotes(id, notesArray) {
     for (let i = 0; i < notesArray.length; i++) {
         let note = notesArray[i];
 
-        if (note.id === id) {
+        if (note.id == id) {
             notesArray.splice(i, 1);
             fs.writeFileSync(
                 path.join(__dirname, './db/db.json'),
