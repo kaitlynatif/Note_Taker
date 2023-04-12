@@ -5,7 +5,9 @@
 * [User Story](#user-story)
 * [Acceptance Criteria](#acceptance-criteria)
 * [Installation & Usage](#installation-and-usage)
+* [Built With](#built-with)
 * [Mock-Up](#mock-up)
+* [Getting Started](#getting-started)
 * [Contributions](#contributions)
 * [Questions](#questions)
 * [License](#license)
@@ -94,6 +96,14 @@ heroku create
 git push heroku main
 heroku open
 ```
+
+## Built With
+* [Express.js](https://expressjs.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Heroku](https://www.heroku.com/)
+* [npm](https://www.npmjs.com/)
+* [JSON](https://www.json.org/json-en.html)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Mock-Up
 
