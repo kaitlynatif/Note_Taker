@@ -9,6 +9,7 @@
 * [Built With](#built-with)
 * [Mock-Up](#mock-up)
 * [Getting Started](#getting-started)
+* [What I learned](#what-i-learned)
 * [Contributions](#contributions)
 * [Questions](#questions)
 * [License](#license)
@@ -103,7 +104,7 @@ heroku open
 ## Usage
 
 ### The following steps are required to use this application:
-1. Click to open the Deployed Application Link: https://rocky-temple-86864.herokuapp.com/
+1. Click to open the deployed application link: https://rocky-temple-86864.herokuapp.com/
 2. Click "Get Started" to open the note taker.
 3. Enter text into the 'title' and 'text' fields
 4. Click the save icon (top right) to save the note.
@@ -144,6 +145,22 @@ The following API routes should be created:
 * `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
 
 * `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+
+## What I Learned
+
+* I learned how create api routes and html routes.
+* I learned direct deployment to Heroku from the integrated terminal command line interface.
+
+### Further Reflections from troubleshooting this application:
+* I refactored my entire code with inspiration from the following video tutorial by Thomas Calle: https://youtu.be/-UiqzvUe360
+* After refactoring the code, I was able to eliminate the 500 status error on lines 37 & 46 of the index.js page (corresponding to the fetch requests) that I was getting when I tried to post or delete a note.
+* The 500 status error was likely caused by the fact that I had not written correctly the code for the createNotes() and deleteNotes() functions.
+* Within the createNotes() and deleteNotes() function, I had attempted to assign unique ids to each note by using the index of the array. This was a failure.
+* I also attempted to use the array splice() method to remove the note with the given id property. This was a failure. 
+* After failing to successfully resolve the issues with my createNotes() and deleteNotes() functions as well as the array both on my own and with the assistance of a tutor, I implemented the uuid npm package to generate unique ids for each note rather than using the index of the array.
+* I reorganized the folders and some of the file locations to make the file paths cleaner.
+* I added a new folder called "routes" and created two new files: html_routes.js and api_routes.js.
+* I wanted to separate the api and html routes from the server.js file so that the code would be easier to read and maintain.
 
 ## Contributions
 ### Credits and Helpful Resources Used to Create this Application
