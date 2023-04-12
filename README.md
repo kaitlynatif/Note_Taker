@@ -82,7 +82,7 @@ npm install
 ```
 
 ```bash
-npm install uuid
+npm i uuid@3.4.0
 ```
 
 ```bash
