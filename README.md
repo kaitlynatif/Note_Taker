@@ -4,7 +4,8 @@
 * [Description](#description)
 * [User Story](#user-story)
 * [Acceptance Criteria](#acceptance-criteria)
-* [Installation & Usage](#installation-and-usage)
+* [Installation](#installation)
+* [Usage](#usage)
 * [Built With](#built-with)
 * [Mock-Up](#mock-up)
 * [Getting Started](#getting-started)
@@ -18,7 +19,6 @@ The task is to modify starter code to create an application called Note Taker th
 
 The application’s front end has already been created. The goal is to build the back end, connect the two, and then deploy the entire application to Heroku.
 
-
 ## User Story
 
 ```
@@ -26,7 +26,6 @@ AS A small business owner
 I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
 ```
-
 
 ## Acceptance Criteria
 
@@ -46,7 +45,7 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
 
-## Installation And Usage
+## Installation
 
 ### The following steps are required to install and use this application:
 
@@ -83,6 +82,10 @@ npm install
 ```
 
 ```bash
+npm install uuid
+```
+
+```bash
 heroku local web --port 3001
 ```
 
@@ -97,12 +100,23 @@ git push heroku main
 heroku open
 ```
 
+## Usage
+
+### The following steps are required to use this application:
+1. Click to open the Deployed Application Link: https://rocky-temple-86864.herokuapp.com/
+2. Click "Get Started" to open the note taker.
+3. Enter text into the 'title' and 'text' fields
+4. Click the save icon (top right) to save the note.
+5. Click the + icon (top right) to add another note.
+6. Additional: Click the trash icon to delete saved notes.
+
 ## Built With
 * [Express.js](https://expressjs.com/)
 * [Node.js](https://nodejs.org/en/)
 * [Heroku](https://www.heroku.com/)
 * [npm](https://www.npmjs.com/)
 * [JSON](https://www.json.org/json-en.html)
+* [UUID](https://www.npmjs.com/package/uuid)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Mock-Up
@@ -138,6 +152,7 @@ The following API routes should be created:
 * [Node.js](https://nodejs.org/en/)
 * [Heroku](https://www.heroku.com/)
 * [npm](https://www.npmjs.com/)
+* [UUID](https://www.npmjs.com/package/uuid)
 * [Express JS Crash Course](https://youtu.be/L72fhGm1tfE)
 * [Express JS Note Taker Video Tutorial](https://youtu.be/-UiqzvUe360)
 * [What is process.env.PORT in Node.js?](https://stackoverflow.com/questions/18864677/what-is-process-env-port-in-node-js)
